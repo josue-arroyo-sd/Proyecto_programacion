@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_4_0.xsd"
-       bean-discovery-mode="all">
-</beans>
+<web-xml version="6.0" 
+         xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6.0.xsd">
+
+    <!-- Declaración del Servlet -->
+    <servlet>
+        <servlet-name>ProductosServlet</servlet-name>
+        <servlet-class>com.mycompany.proyectofinal.Productos</servlet-class>
+    </servlet>
+
+    <!-- Mapeo de la URL -->
+    <servlet-mapping>
+        <servlet-name>ProductosServlet</servlet-name>
+        <url-pattern>/listarProductos</url-pattern>
+    </servlet-mapping>
+
+    <!-- Página de inicio predeterminada -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-xml>
